@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  min-width: 600px;
+  background-color: rgb(201, 201, 201);
+}
+
+.main_row {
+  width: 70%;
+  max-height: 580px;
+  background-color: whitesmoke;
+  margin: 2.5% 15%;
+  position: relative;
+  box-shadow: 3px 10px 3px 2px #302f2f;
+}
+
+#title {
+  background: goldenrod;
+  position: relative;
+  width: 60%;
+  margin: 0% 20%;
+  top: 3vw;
+  height: 18vw;
+  min-height: 108px;
+  padding: 2%;
+}
+
+/*  irrelevant because of border box 
+
+#title > div {
+  width: 100%;
+  height: 100%;
+} */
+
+.image {
+  position: absolute;
+  width: 94%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  display: inline-block;
+  position: relative;
+  top: 40%;
+  left: 69%;
+  transform: translate(-30%, -50%);
+  z-index: 1;
+  min-width: 108px;
+  min-height: 36px;
+  -webkit-text-stroke-width: 0.065vw;
+  -webkit-text-stroke-color: black;
+  width: 18vw;
+  height: 5vw;
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 600px) {
+  .text {
+    font-size: 12px;
+  }
+}
+
+.text::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.28;
+  z-index: -1;
+  content: " ";
+}
+
+#body {
+  background-color: lightgreen;
+  width: 60%;
+  margin: 7vw 20% 5vw 20%;
+  text-indent: 4vw;
+  text-align: justify;
+  padding: 0.5rem 1rem 1rem 1rem;
+  object-fit: contain;
+}
+
+#body_title {
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+#links {
+  position: relative;
+  width: 60%;
+  margin: 5vw 20%;
+  padding: 2%;
+  bottom: 3vw;
+  background-color: lightsalmon;
+}
+/* Things for later - text edition 
+
+ font-size: calc(10.5px + 1.15vw); 
+
+ .text {
+  display: inline-block;
+  position: absolute;
+  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-color: black;
+  z-index: 3;
+  min-width: 260px; /* holy shit so this was the problem ! *
+  top: 40%;
+  left: 69.5%;
+  transform: translate(-30%, -50%);
+  font-size: calc(10.5px + 1.15vw);
+  margin: 0px;
+  padding: 0px;
+ }
+*/
+
+/* /////////////////////////// Project Page ///////////////////////// */
+
+.title {
+  position: relative;
+  text-align: center;
+  margin: 5vw;
+  background-color: lightpink;
+  top: 2vw;
+  text-decoration-line: underline;
+}
+/* 
+//////////////////////////version 2 /////////////////////////////
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 600px;
+  z-index: -2;
+  background-color: lightblue;
+}
+
+#main_row {
+  width: 80%;
+  height: 800px;
+  background-color: whitesmoke;
+  margin: 2.5% 10%;
+  position: relative;
+  z-index: -1;
+  box-shadow: 10px 10px 5px rgb(63, 61, 61);
+}
+
+#title {
+  background: goldenrod;
+  position: relative;
+  width: 60%;
+  margin: 0% 20%;
+  top: 2%;
+  height: 18vw;
+  z-index: 0;
+  min-height: 120px;
+  overflow: hidden;
+  padding: 2%;
+}
+
+/* to clip text - make image parent div and make its background the image everything should work the same *
+.image {
+  position: absolute;
+  width: 94%;
+  height: 88%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.text {
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  left: 69.5%;
+  transform: translate(-30%, -50%);
+  min-width: 260px;
+  font-size: calc(10.5px + 1.15vw);
+  color: black;
+  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-color: black;
+  z-index: 3;
+  margin: 0px;
+  padding: 0px;
+  min-width: 260px;
+}
+
+.text::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.2;
+  z-index: -1;
+  content: " ";
+}
+
+.button {
+  z-index: 5;
+}
+*/
+
+/* 
+
+Version 1 
+
+#home_title_background {
+  position: relative;
+  background-color: lightblue;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: -2;
+  height: 500px;
+  top: 10px;
+}
+
+.home.title {
+  position: relative;
+  top: 10px;
+  width: 90%;
+  height: 200px;
+  margin-left: 5%;
+  margin-right: 5%;
+  z-index: -1;
+  height: 200px;
+}
+
+#image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 100%;
+  object-fit: contain;
+}
+
+#border1 {
+  border: 2px solid black;
+  padding: 10px;
+  height: 500px;
+}
+
+.text {
+  display: incline-block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+body {
+  background-color: lightpink;
+  z-index: -3;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+*/
+
+/* images for later 
+https://miro.medium.com/max/2560/1*4N1nYORKAkSJI89FCrdE4Q.png
+https://img.freepik.com/free-vector/illustration-technology-vector_53876-5319.jpg?size=626&ext=jpg
+
+Things I learned 
+text-align: justify 
+*/

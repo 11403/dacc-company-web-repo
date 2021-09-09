@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+body {
+  background-color: rgb(28, 33, 49);
+  height: 100vh;
+  width: 100vw;
+  min-height: 220px;
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.backgroundInvert {
+  background-color: rgb(227, 222, 206);
+}
+/* 16.55px
+@media (orientation: portrait) {
+  body {
+    width: 800px;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    height: calc(100vh - 16.55px);
+  }
+}
+*/
+
+.body.main {
+  background-color: rgb(126, 126, 126);
+  position: relative;
+  height: 80%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 35px;
+  font-family: sans-serif;
+}
+
+.subBody {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  padding: 2%;
+}
+
+.subBody.left {
+  left: 0;
+  border-radius: 35px 0 0 35px;
+}
+
+.active {
+  background-color: rgb(207, 207, 207);
+}
+
+.winner {
+  filter: invert(100%) !important; 
+  background-color: gold !important; 
+}
+
+.subBody.right {
+  right: 0;
+  border-radius: 0 35px 35px 0;
+}
+
+/* I mean if it's just the background 
+.active {
+  z-index: 1;
+  background-color: pink;
+}
+*/
+
+.title {
+  color: rgb(126, 205, 230);
+  background-color: black;
+  width: 60%;
+  border-radius: 15px;
+  padding: 1%;
+  margin: auto;
+  top: 8%;
+  /* font-size: calc(0.8vw + 1.2vh); */
+  font-size: Calc(2.4vh + 1vw);
+}
+
+.subBody.left.active > .title {
+  position: absolute;
+  right: 25%;
+}
+
+.subBody.right > .title {
+  position: absolute;
+  left: 25%;
+}
+
+.bigScore {
+  top: 40%;
+  background-color: black;
+  color: rgb(126, 205, 230);
+  width: 16vw;
+  padding: Calc(1.2vh + 0.35vw) 0%;
+  border-radius: 10px;
+  font-size: Calc(2vh + 0.7vw + 10px);
+}
+
+.bigScore.left {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  left: 45%;
+}
+
+.bigScore.right {
+  position: absolute;
+  transform: translate(50%, 0%);
+  right: 45%;
+}
+
+.current {
+  background-color: black;
+  position: absolute;
+  bottom: 10%;
+  transform: translate(-50%, 0%);
+  width: 60%;
+  object-fit: contain;
+  padding: 1.5%;
+  border-radius: 15px;
+  color: rgb(126, 205, 230);
+  font-size: Calc(2vh + 0.7vw);
+}
+
+.current.left {
+  left: 45%;
+}
+
+.current.right {
+  right: -15%;
+}
+
+.button {
+  position: relative;
+  background-color: rgba(29, 167, 209, 0.582);
+  height: 100%;
+  width: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  line-height: calc(1vh + 1vw);
+  border-radius: 25px;
+}
+
+.buttons {
+  position: absolute;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+  padding: 0 2%;
+  font-size: Calc(2vh + 0.7vw);
+  border-radius: 10px;
+  font-family: cursive;
+}
+
+#newGame {
+  top: 10%;
+}
+
+#hold {
+  top: 60%;
+  /* top: 52vh; */
+}
+
+#roll {
+  top: 80%;
+  /*  top: 62vh;  */
+}
+
+.buttons.image {
+  bottom: 45%;
+  /* bottom: 32vh; */
+  width: 60%;
+  height: 30%;
+  object-fit: contain;
+  background-color: rgba(255, 0, 0, 0);
+  filter: invert(100%);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  position: fixed;
+  padding: 5px;
+  background-color: yellow;
+  overflow: auto;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border: 5px solid red;
+  text-align: center;
+  font-size: calc(0.5vw + 2.5vh);
+}
+
+#warning {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  font-weight: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+.setting_box {
+  position: absolute;
+  right: 2.5%;
+  top: 2.5%;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  padding: 0.5% 0.5%;
+  flex-direction: column;
+  border-radius: 10%;
+}
+
+.setting_box > button {
+  margin: 5px;
+  font-size: 1vw;
+  padding: 0 5%;
+  border-radius: 50%;
+  width: 75%; 
+}
+
+.invert { 
+  filter: invert(100%);
+}
+
+/* (max-width: 550px*/
+@media (orientation: portrait) {
+  body {
+    height: calc(100vh - 16.55px);
+    width: 615px;
+  }
+  .buttons {
+    height: 13%;
+  }
+  .buttons,
+  .current,
+  .title {
+    font-size: 16px;
+  }
+
+  .bigScore {
+    font-size: 20px;
+    width: 40%;
+  }
+
+  #image {
+    width: 85%;
+    height: 50%;
+    bottom: 35%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 530px) and (max-height: 220px) {
+  #image {
+    bottom: 40%;
+  }
+}
+
+@media (max-height: 220px) {
+  .current {
+    padding: 1%;
+  }
+  .buttons,
+  .current,
+  .title {
+    font-size: 12px;
+  }
+
+  .bigScore {
+    font-size: 15px;
+  }
+
+  body {
+    width: calc(100vw - 16.55px);
+  }
+}

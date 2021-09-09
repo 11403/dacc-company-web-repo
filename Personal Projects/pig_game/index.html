@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="invert">
+    <title>Pig Game</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://cdn3.iconfinder.com/data/icons/universal-job-2/32/line_basic_general_universal_job_eye-512.png"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <div class="setting_box">
+    <button class="nightlight">Night Light</button>
+    <button> <a style="text-decoration: none; color: black;" href="/great_connector/portfolio.html" >return</a></button>
+    <button>Zoom</button>
+  </div>
+  <body class="backgroundInvert">
+    <main class="body main invert">
+      <section class="subBody left active">
+        <h1 class="title">Player 1</h1>
+        <h1 class="bigScore left">000</h1>
+        <div class="current left">
+          <h3 class="score">Current: <spam class="subScore" id="subScore0">000</spam></h3>
+        </div>
+      </section>
+      <section class="subBody right">
+        <h1 class="title">Player 2</h1>
+        <h1 class="bigScore right">000</h1>
+        <div class="current right">
+          <h3 class="score">Current: <spam class="subScore" id="subScore1">000</spam></h3>
+        </div>
+      </section>
+      <section class="button">
+        <button class="buttons" id="newGame">New Game</button>
+        <img src="dice-1.png" class="buttons image" alt="dice" />
+        <button class="buttons" id="roll">Roll Dice</button>
+        <button class="buttons" id="hold">Hold</button>
+      </section>
+    </main>
+<div class="overlay hidden"></div>
+      <section class="modal hidden">
+        <h1 id="warning">*WARNING*</h1>
+      </br> 
+        <h1>Please turn your device horizontally.</h1>
+        <h2>
+          If you wish to continue, you may, but the Game will function better
+          in Landscape.
+        </h2>
+        <h2>***Thank You***</h2>
+        <button class="closeButton">&times</button>
+      </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
