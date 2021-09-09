@@ -1,0 +1,53 @@
+
+html { 
+    background-color: rgba(255, 166, 0, 0.541); 
+}
+/* body { 
+    background-color: lightblue;
+} */ 
+
+#google { 
+    text-decoration: none;
+    color: red; 
+}
+
+#google:hover { 
+    font-size: 2rem; 
+    background-color: green; 
+}
+
+table { 
+    border: solid black 4px;
+    border-radius: 5px;
+    background-color: white; 
+    width: 700px; 
+    font-size: 16pt; 
+}
+
+#left { 
+    background-color: rgba(0, 0, 255, 0.322);
+    width: 60%; 
+}
+
+#right { 
+    background-color:  rgba(0, 128, 0, 0.308); 
+    width: 40%; 
+}
+
+span { 
+    font-family: Verdana;
+    font-size: 16pt;
+    font-weight: 300;
+}
+
+div { 
+    background-color: lightblue; 
+    border-radius: 5px;
+    width: 300px; 
+    height: 100px; 
+    padding: 10px; 
+}
+
+img { 
+    width: 150px; 
+}

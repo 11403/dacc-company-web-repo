@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+html {
+  background-color: lightpink;
+}
+
+body {
+  background-color: lightblue;
+  font-size: calc(2vw + 5px);
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  /* max-height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main {
+  position: relative;
+  height: 85%;
+  width: 85%;
+  background-color: rgb(255, 255, 255);
+  /* text-align: center; */
+  padding: 1em;
+}
+
+.setting_box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: blueviolet;
+  display: flex;
+  padding: 0.5% 0.5%;
+  flex-direction: column;
+  border-radius: 10%;
+}
+
+.setting_box > button {
+  margin: 0.15em;
+  font-size: 0.5em;
+  padding: 0 0.15em;
+}
+
+.title {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.bar {
+  position: absolute;
+  top: 5em;
+  left: 0;
+  width: 100%;
+  padding: 0.8vw 0;
+  background-color: rgba(137, 43, 226, 0.63);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  font-size: 0.6em;
+  border-radius: 1em;
+  padding: 0 0.2em;
+  border-width: 0.2rem;
+}
+
+.bar > a > button:hover { 
+  font-size: 0.65em; 
+  font-weight: 530;
+}
+
+button:hover { 
+  background-color: rgb(44, 44, 194);
+  color: white; 
+}
+
+button:active { 
+  background-color: rgb(44, 44, 194);
+  color: white; 
+}
+
+.main_body {
+  position: relative;
+  top: 9vw;
+}
+
+.main_body > p {
+  text-indent: 5%;
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+/* Only for Skills Page */
+.skills_pannel {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 8vw;
+}
+
+ul > h2 {
+  text-decoration: underline;
+}
+
+.bottomlink{
+  position: absolute; 
+  right: 0; bottom: 0; 
+  background-color: rgba(137, 43, 226, 0.63);
+  padding: .5%; 
+}
+
+.bottomlink > a { 
+  margin: 5px; 
+  color: white;
+}
+
+.bottomlink > a:hover { 
+  color: blue; 
+}
+
+@media only screen and (max-width: 500px) {
+  /* .bar {
+    top: 10%;
+  } */
+  body {
+    background-color: green;
+  }
+}

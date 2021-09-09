@@ -1,0 +1,96 @@
+/* version https://git-lfs.github.com/spec/v1
+oid sha256:19e48a542b5921b3e1435387e98855440e3cb3b1a82605f13d9418c98371089c
+size 166 */
+
+.flexbox {
+  background-color: orange;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  position: absolute;
+  width: 80%;
+  /* max-height: 70%; Might have to Take off later */
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, 0%);
+  padding: 2.5% 0;
+}
+
+.flexbox > div {
+  background-color: rgb(74, 192, 74);
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0 2.5%;
+  line-height: 1.25em;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: column;
+}
+
+ul {
+  background-color: rgba(255, 255, 0, 0.63);
+  width: 80%;
+  height: 100%;
+  padding-left: 15%;
+  padding-bottom: 2.5%;
+  text-align: left;
+}
+
+.flex_titles {
+  text-decoration: underline;
+}
+
+li {
+  padding-left: auto !important;
+  overflow: visible !important;
+}
+
+/* Mobile view //////////////////////////////////////////////// */
+
+@media only screen and (orientation: portrait) /* and (max-width: 900px) */ {
+  body {
+    background-color: hsla(120, 37%, 46%, 0.522);
+    font-size: calc(3vw + 6.5px);
+    min-height: 300px;
+  }
+  body > main {
+    width: 95%;
+    height: 95%;
+  }
+  .flexbox {
+    width: 100%;
+    padding: 0 2.5%;
+  }
+  .flexbox > div {
+    flex-basis: 350px;
+    margin: 2.5% 0;
+    height: 90%;
+  }
+  ul {
+    text-align: center;
+    padding-left: 5%;
+  }
+}
+/* 
+@media only screen and (orientation: landscape) and (max-width: 650px) {
+  body { 
+    background-color: rgba(255, 166, 0, 0.685);
+    font-size: calc(2vw + 2vh + 6.5px);
+    min-height: 100px; 
+  }
+  body > main { 
+    width: 95%; 
+    height: 95%; 
+  }
+ }
+*/
+/* Large PC/ Monitor/ Tv size */
+/* 
+@media only screen and (orientation: landscape) and (min-width: 1600px) {
+  body { 
+    background-color: rgba(220, 20, 60, 0.445);
+  }
+}
+*/
