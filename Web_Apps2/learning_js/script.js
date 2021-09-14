@@ -1,5 +1,5 @@
 'use strict'
-
+/* 
 const x = 14; 
 console.log(x);
 
@@ -41,3 +41,18 @@ function swapImage(x) {
     currentPosition = 1; 
 }
 } 
+*/ 
+function gitInput() { 
+    //alert("working"); 
+    let myText = document.getElementById("tempInputText").value; 
+    //console.log(myText)
+    document.getElementById("inputPara").innerHTML = myText;  
+}
+
+document.getElementById("tempInputSubmit2").addEventListener("click", getInput2);
+
+function getInput2() { 
+    let myText2 = document.getElementById("tempInputText2").value; 
+    //console.log(myText2)
+    document.getElementById("inputPara2").innerHTML = myText2;  
+}
