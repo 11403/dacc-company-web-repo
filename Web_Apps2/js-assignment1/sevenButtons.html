@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS - Notes</title>
+    <style>
+      span {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #444444;
+        font-size: 12pt;
+      }
+      .input {
+        border: solid 2px grey;
+        border-radius: 10px;
+        width: 500px;
+        font-size: 12pt;
+        background-color: rgb(238, 144, 202);
+      }
+      table { 
+          border: 2px solid black; 
+          border-radius: 10px;
+          background-color: rgb(213, 245, 255); 
+          padding: 1%; 
+      }
+      #header { 
+          font-size: 12pt; 
+          background-color: lightsalmon; 
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">
+          <span id="header"> Please Complete the Form Below </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span> Full Name:  </span><br />
+         
+        </td>
+        <td> 
+          <input type="text" id="name" class="input1"/>   
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span> Job Type:  </span><br />
+         
+        </td>
+        <td> 
+          <input type="text" id="job" class="input2"/>   
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span> Email:  </span><br />
+          <td> 
+            <input type="text" id="email" class="input3"/>
+            </td>
+        </td>
+        </tr>
+        <tr>
+          <td>
+            <span> Phone Number:  </span><br />
+          </td>
+          <td> 
+            <input type="text" id="number" class="input4"/>   
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span> Age:  </span><br />
+           
+          </td>
+          <td> 
+            <input type="text" id="age" class="input5"/>   
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span> Ethnicity: </span><br />
+          </td>
+          <td> 
+            <input type="text" id="ethnicity" class="input6"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span> Perferred Pop </span><br />
+              
+            </td>
+        <td> 
+          <input type="text" id="pop" class="input7"/>   
+        </td>
+      </tr>
+      <tr> 
+          <td colspan="2">
+              <input type="submit" value="click to submit" id="submit" onclick="submit()"> 
+          </td>
+        </tr> 
+    </table>
+    <script>
+      function submit() {  
+        let condition = true; 
+        for(let i=1; i < 8; i++) { 
+          if(document.querySelector(`.input${i}`).value === "") { 
+            alert("Wrong"); 
+            condition = false; 
+          break; 
+        }
+      }
+      if (condition) {
+      alert("correct");
+        return; 
+      }
+    }
+    </script>
+  </body>
+</html>
