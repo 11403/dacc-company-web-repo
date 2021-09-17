@@ -1,0 +1,35 @@
+* { 
+    border-radius: 10px;
+    padding: 2.5px; 
+}
+
+
+table { 
+    background-color: rgba(173, 38, 38, 0.753); 
+    padding: 10px;   
+}
+
+span { 
+    background-color: yellow; 
+}
+
+input { 
+    background-color: orange; 
+}
+
+#submit { 
+    background-color: lightblue; 
+}
+
+img { 
+    width: 400px; 
+    border: 5px solid green; 
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+#hidden { 
+    display: none;
+}
