@@ -101,19 +101,26 @@
           </td>
         </tr> 
     </table>
+    <p id="output"></p>
     <script>
       function submit() {  
         let condition = true; 
+        const outPut = document.getElementById("output");
+        outPut.innerHTML = `Missing: ` 
         for(let i=1; i < 8; i++) { 
-          if(document.querySelector(`.input${i}`).value === "") { 
-            alert("Wrong"); 
+          const arrayError = ["Name", "Job Type", "Email", "Phone Number", "Age", "Ethnicity", "Perferred Pop"]; 
+          if( document.querySelector(`.input${i}`).value === ""){
+            outPut.textContent += ` ${arrayError[i - 1]}, -- `
             condition = false; 
-          break; 
         }
       }
       if (condition) {
       alert("correct");
         return; 
+      } else if (!condition) { 
+        alert("Wrong"); 
+      } else { 
+        alert("broken"); 
       }
     }
     </script>
