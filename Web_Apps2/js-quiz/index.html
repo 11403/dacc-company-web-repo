@@ -1,64 +1,13 @@
-<!-- --------------------------------------- #'s 1 - 4 ------------------------------------------------------------------------> 
-<!--
-    
-// 1.) it won't work because you used href instead of src="" 
 
-// 2.)      1. var      2. Const        3. let
-
-// 3.) when clicked, the name input box will have its value set to "AppDev1 Student"
-
-// 4.) document.getElementById("my_submit").innerHTML += t-- ext; 
-
--->
-
-<!-- #4.) --> 
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Javascript Test</title>
-  </head>
-  <body> 
-    <p id="my_para"></p>
-    <input type="submit" id="my_submit"> 
-    <script> 
-    let submitButton = document.querySelector("#my_submit"); 
-    function writeToParagraph() { 
-        let text = "Hi, I'm a prargraph. Important information goes here."; 
-        document.getElementById("my_submit").innerHTML += t-- ext; 
-    }
-    </script> 
-  </body>
-</html> --> 
-
-<!-------------------------------------------- #5.) ---------------------------------------------------------------> 
-<!-- 
- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Javascript Test</title>
-    <link rel="stylesheet" href="style.css"/> 
-  </head>
-  <body> 
-      <h1 id="hidden"> DELAWARE AREA CARRER CENTER </h1>
-      <img src="Sebastian Johnson - dacc.jpg" alt="DACC" onmouseover="reveal()"/> 
-    <script> 
-        function reveal() { 
-            document.getElementById("hidden").style.display = "inline-block"
-        }
-    </script> 
-  </body>
-</html> 
--->
-
-<!----------------------------------------------- #6 --------------------------------------------------------------->
-<!-- 
+ 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Javascript Test</title>
     <link rel="stylesheet" href="style.css"/> 
   </head>
   <body> 
+    <!----------------------------------------------- #6 --------------------------------------------------------------->
     <table>
         <tr>
           <td colspan="2">
@@ -84,7 +33,7 @@
         </tr>
         <tr>
           <td>
-            <span> Email Address:  </span><br />
+            <span> Email Address:  </span><br/>
             <td> 
               <input type="text" id="email" class="input3"/>
               </td>
@@ -92,20 +41,30 @@
           </tr>
           <tr>
             <td>
-              <span> Phone Number:  </span><br />
+              <span> Phone Number:  </span><br/>
             </td>
             <td> 
               <input type="text" id="phone" class="input4"/>   
             </td>
         </tr>
         <tr> 
-            <td colspan="2">
+            <td>
                 <input type="submit" value="Click to submit" id="submit" onclick="submit()"> 
             </td>
           </tr> 
       </table>
       <p title="speaking words of wisdom, let it be, let it be" id="status"> pp boy haahahhahahahahahah</p>
+        <!-------------------------------------------- #5.) ------------------------------------------------------> 
+
+        <h1 id="hidden"> DELAWARE AREA CARRER CENTER </h1>
+        <img src="Sebastian Johnson - dacc.jpg" alt="DACC" onmouseover="reveal()"/> 
+  
     <script> 
+    // ----------------------------------------- 5 -------------------------------------------
+    function reveal() { 
+            document.getElementById("hidden").style.display = "block"
+        }
+        // ------------------------------------ 6 --------------------------------------------
     function submit() { 
         let name = document.getElementById("name").value; 
         let job = document.getElementById("job").value; 
@@ -132,7 +91,38 @@
         //console.log("working")
     }
     </script> 
-    
   </body>
 </html>
--->
+
+<!-- --------------------------------------- #'s 1 - 4 -------------------------------------------------------------------> 
+<!--
+    
+// 1.) it won't work because you used href instead of src="" 
+
+// 2.)      1. var      2. Const        3. let
+
+// 3.) when clicked, the name input box will have its value set to "AppDev1 Student"
+
+// 4.) document.getElementById("my_submit").innerHTML += t-- ext; 
+--> 
+<!------------------------------------------ #4.) ----------------------------------------------------> 
+<!-- 
+ <!DOCTYPE html>
+<html> 
+  <head>
+    <title>Javascript Test</title>
+  </head>
+  <body> 
+    <p id="my_para"></p>
+    <input type="submit" id="my_submit"> 
+    <script> 
+    let submitButton = document.querySelector("#my_submit"); 
+    function writeToParagraph() { 
+        let text = "Hi, I'm a prargraph. Important information goes here."; 
+        document.getElementById("my_submit").innerHTML += text; 
+    }
+    </script> 
+  </body> 
+</html>  
+ -->
+
